@@ -1,0 +1,5 @@
+streamlit
+python-dotenv
+groq
+
+sub-modules (reader, generator, evaluator, explanation, performance).
