@@ -3,4 +3,4 @@ python-dotenv
 groq
 pypdf
 docx
-exception
+exceptions
