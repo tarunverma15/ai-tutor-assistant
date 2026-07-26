@@ -26,7 +26,9 @@ load_dotenv()
 api_key = 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
 client = Groq(api_key=api_key) if api_key else None
 
-MODEL = "openai/gpt-oss-120b"
+
+MODEL = "llama3-70b-8192" 
+
 
 generator = QuestionGenerator(client, MODEL)
 evaluator = Evaluator(client, MODEL)
