@@ -23,7 +23,7 @@ st.set_page_config(
 
 load_dotenv()
 
-api_key = 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
+api_key = "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"
 client = Groq(api_key=api_key) if api_key else None
 
 
