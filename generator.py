@@ -145,6 +145,71 @@ Generate ONE NEW question.
 Return JSON only.
 """
 
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": system_prompt
+                    },
+                    {
+                        "role": "user",
+                        "content": user_prompt
+                    }
+                ],
+                response_format={
+                    "type": "json_object"
+                }
+            )
+        except groq.BadRequestError as e:
+            import streamlit as st
+            st.error(f"Groq API Bad Request: {e.message}")
+            raise
+
+        return json.loads(
+            response.choices[0].message.content
+        )    "question_type":"Fill in the Blanks",
+    "question":"AI is a subset of ______.",
+    "correct_answer":"Computer Science",
+    "model_answer":"..."
+}}
+
+For True/False
+
+{{
+    "topic":"...",
+    "question_type":"True/False",
+    "question":"Deep Learning requires large datasets.",
+    "correct_answer":"True",
+    "model_answer":"..."
+}}
+
+For One Word
+
+{{
+    "topic":"...",
+    "question_type":"One Word",
+    "question":"Which algorithm uses multiple decision trees?",
+    "correct_answer":"Random Forest",
+    "model_answer":"..."
+}}
+"""
+
+        user_prompt = f"""
+Knowledge:
+
+{knowledge}
+
+Previous Questions:
+
+{"\n".join(previous_questions)}
+
+Generate ONE NEW question.
+
+Return JSON only.
+"""
+
         response = self.client.chat.completions.create(
             model=self.model,
             messages=[
