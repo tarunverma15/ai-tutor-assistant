@@ -190,7 +190,7 @@ For One Word
     "correct_answer":"Random Forest",
     "model_answer":"..."
 }}
-"""
+
 
         user_prompt = f"Knowledge: {knowledge} Previous Questions: {"\n".join(previous_questions)} Generate ONE NEW question. Return JSON only."
           
