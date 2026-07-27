@@ -444,6 +444,26 @@ padding: 2px 10px;
 border-radius: 9999px;
 }}
 
+/* Fix radio/checkbox/text-input labels being invisible in light mode */
+div[data-testid="stRadio"] label,
+div[data-testid="stRadio"] p,
+div[data-testid="stRadio"] span,
+div[data-testid="stWidgetLabel"] label,
+div[data-testid="stWidgetLabel"] p,
+div[data-testid="stMarkdownContainer"] p,
+div[data-testid="stTextInput"] label,
+div[data-testid="stTextArea"] label,
+[data-testid="stSlider"] label {
+    color: var(--text) !important;
+    opacity: 1 !important;
+}
+
+/* The radio group's own label ("Choose Answer") */
+div[data-testid="stRadio"] > label > div[data-testid="stMarkdownContainer"] p {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+}
+
 div[data-testid="stButton"] button {{
 border-radius: 9999px !important;
 height: 52px !important;
