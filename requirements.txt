@@ -4,3 +4,4 @@ groq
 pypdf
 python-docx
 easyocr
+PyMuPDF
