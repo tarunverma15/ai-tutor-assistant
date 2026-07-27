@@ -1,11 +1,7 @@
 import json
-from groq import Groq
 import groq
+from groq import Groq
 
-try:
-    response = self.client.chat.completions.create(...)
-except groq.BadRequestError as e:
-    st.error(f"Groq API Bad Request: {e.message}")
 
 
 class QuestionGenerator:
