@@ -462,13 +462,6 @@ color: var(--text) !important;
 font-weight: 700 !important;
 }}
 
-
-/* The radio group's own label ("Choose Answer") */
-div[data-testid="stRadio"] > label > div[data-testid="stMarkdownContainer"] p {
-    color: var(--text) !important;
-    font-weight: 700 !important;
-}
-
 div[data-testid="stButton"] button {{
 border-radius: 9999px !important;
 height: 52px !important;
