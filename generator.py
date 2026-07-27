@@ -173,7 +173,7 @@ Return JSON only.
     "question":"AI is a subset of ______.",
     "correct_answer":"Computer Science",
     "model_answer":"..."
-}}
+}
 
 For True/False
 
