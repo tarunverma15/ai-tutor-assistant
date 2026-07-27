@@ -192,19 +192,18 @@ For One Word
 }}
 """
 
-        user_prompt = f"""
-Knowledge:
+        user_prompt = f"""Knowledge:
 
-{knowledge}
+         {knowledge}
 
-Previous Questions:
+         Previous Questions:
 
-{"\n".join(previous_questions)}
+         {"\n".join(previous_questions)}
 
-Generate ONE NEW question.
+         Generate ONE NEW question.
 
-Return JSON only.
-"""
+         Return JSON only.
+          """
 
         response = self.client.chat.completions.create(
             model=self.model,
