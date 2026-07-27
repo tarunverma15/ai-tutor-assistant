@@ -27,7 +27,7 @@ api_key = "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"
 client = Groq(api_key=api_key) if api_key else None
 
 
-MODEL = "llama3-70b-8192" 
+MODEL = "openai/gpt-oss-120b"
 
 
 generator = QuestionGenerator(client, MODEL)
