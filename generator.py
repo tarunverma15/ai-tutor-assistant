@@ -169,11 +169,7 @@ Return JSON only.
 
         return json.loads(
             response.choices[0].message.content
-        )    "question_type":"Fill in the Blanks",
-    "question":"AI is a subset of ______.",
-    "correct_answer":"Computer Science",
-    "model_answer":"..."
-}
+        )    
 
 For True/False
 
